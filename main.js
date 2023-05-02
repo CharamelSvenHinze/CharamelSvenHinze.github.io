@@ -34,6 +34,8 @@ button.on("pointertap", () => {
     video.width = app.screen.width;
     video.height = app.screen.height;
     app.stage.addChild(video);
+
+    app.stage.removeChild(button)
 });
 
 
