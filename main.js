@@ -1,12 +1,32 @@
-let app = new PIXI.Application({width: 640, height:360, backgroundAlpha: 0});
+const app = new PIXI.Application({width: 640, height:360, backgroundAlpha: 0});
 document.body.appendChild(app.view);
 
-let sprite = PIXI.Sprite.from("background.png");
-sprite.width = app.screen.width;
-sprite.height = app.screen.height;
-app.stage.addChild(sprite);
+const button = new PIXI.Graphics()
+    .beginFill(0x0, 0.5)
+    .drawRoundedRect(0, 0, 100, 100, 10)
+    .endFill()
+    .beginFill(0xffffff)
+    .moveTo(36, 30)
+    .lineTo(36, 70)
+    .lineTo(70, 50);
 
-let texture = PIXI.Texture.from("video.webm");
+button.x = (app.screen.width - button.width)/2;
+button.y = (app.screen.height - button.height)/2;
 
-let video = new PIXI.Sprite(texture);
-app.stage.addChild(video);
+button.interactive = true;
+button.cursor = "pointer";
+app.stage.addChild(button)
+
+button.on("pointertap", () => {
+    const sprite = PIXI.Sprite.from("background.png");
+    sprite.width = app.screen.width;
+    sprite.height = app.screen.height;
+    app.stage.addChild(sprite);
+
+    const texture = PIXI.Texture.from("video.webm");
+
+    const video = new PIXI.Sprite(texture);
+    app.stage.addChild(video);
+});
+
+
