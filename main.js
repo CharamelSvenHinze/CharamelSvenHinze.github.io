@@ -31,6 +31,8 @@ button.on("pointertap", () => {
     // ]);
 
     const video = new PIXI.Sprite(texture);
+    video.width = app.screen.width;
+    video.height = app.screen.height;
     app.stage.addChild(video);
 });
 
