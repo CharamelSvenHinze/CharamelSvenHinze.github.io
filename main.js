@@ -1,7 +1,7 @@
 const app = new PIXI.Application({width: 640, height:360, backgroundAlpha: 0});
 document.body.appendChild(app.view);
 
-const background = PIXI.Sprite.from("background.png");
+const background = PIXI.Sprite.from("Lena.png");
 background.width = app.screen.width;
 background.height = app.screen.height;
 app.stage.addChild(background);
