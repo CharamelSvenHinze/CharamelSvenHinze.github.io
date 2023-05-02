@@ -23,7 +23,7 @@ button.cursor = "pointer";
 app.stage.addChild(button)
 
 button.on("pointertap", () => {
-    const texture = PIXI.Texture.from("video.mov")
+    const texture = PIXI.Texture.from("https://rotato.netlify.app/alpha-demo/movie-hevc.mov")
     //const texture = PIXI.VideoBaseTexture.fromUrl("video.webm")
     // const texture = PIXI.VideoBaseTexture.fromUrls([
     //     //{src: "/video.mov", mime: "video/mov"},
