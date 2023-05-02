@@ -24,7 +24,7 @@ app.stage.addChild(button)
 
 button.on("pointertap", () => {
     const texture = PIXI.VideoBaseTexture.fromUrls([
-        {src: "/video.mov", mime: "video/mov"},
+        //{src: "/video.mov", mime: "video/mov"},
         {src: "/video.webm", mime: "video/webm"}
     ]);
 
