@@ -23,10 +23,11 @@ button.cursor = "pointer";
 app.stage.addChild(button)
 
 button.on("pointertap", () => {
-    const texture = PIXI.Texture.from([
-        //{src: "/video.mov", mime: "video/mov"},
-        {src: "/video.webm", mime: "video/webm"}
-    ]);
+    const texture = PIXI.VideoBaseTexture.fromUrl("video.webm")
+    // const texture = PIXI.VideoBaseTexture.fromUrls([
+    //     //{src: "/video.mov", mime: "video/mov"},
+    //     {src: "/video.webm", mime: "video/webm"}
+    // ]);
 
     const video = new PIXI.Sprite(texture);
     app.stage.addChild(video);
